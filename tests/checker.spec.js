@@ -11,16 +11,16 @@ describe("checkForMatch", function(){
   });
 
   it("check for matching sets of braces in a string",function(){
-    //expect(checkForMatch('((yes))')).to.be.equal(true);
+    expect(checkForMatch('((yes))')).to.be.equal(true);
     expect(checkForMatch('((nooo)')).to.be.equal(false);
   });
 
-  it.skip ("check for matching sets of brackets & curly brackets in a string",function(){
+  it("check for matching sets of brackets & curly brackets in a string",function(){
     expect(checkForMatch('(({[yes]}))')).to.be.equal(true);
     expect(checkForMatch('(({{nooo]])')).to.be.equal(false);
   });
 
-  it.skip ("check for matching sets of brackets & curly brackets in a string",function(){
+  it.skip ("check for matching sets of carrots in a string",function(){
     expect(checkForMatch('(({[yes]}))')).to.be.equal(true);
     expect(checkForMatch('(({{nooo]])')).to.be.equal(false);
   });

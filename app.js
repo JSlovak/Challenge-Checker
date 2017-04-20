@@ -1,10 +1,14 @@
 /*jshint esversion: 6 */
 
 let checkForMatch = function(string){
-  let bracketTracker = [];
-  let braceTracker = [];
-  let curlyBraceTracker = [];
-  let carrotTracker = [];
+
+  let tracker = {
+    bracket: [],
+    brace: [],
+    curlyBrace: [],
+    carrot: []
+  };
+
   console.log(string);
 
 
@@ -19,19 +23,22 @@ let checkForMatch = function(string){
 
 
 for (let i = 0; i< string.length; i++){
+
   if( string[i] === bracket1){
 
-      bracketTracker.push('(');
-      console.log(bracketTracker);
+      tracker.bracket.push('(');
+      console.log(tracker.bracket);
   }
 
   if ( string[i] === bracket2){
 
-      bracketTracker.pop();
-      console.log(bracketTracker);
+      tracker.bracket.pop();
+      console.log(tracker.bracket);
   }
+
+
 }
-console.log(bracketTracker);
+console.log(tracker.bracket);
 
 
   // for( brace1 in string){
@@ -63,7 +70,7 @@ console.log(bracketTracker);
 
   //     tracker.pop();
   // }
-  if(bracketTracker.length === 0){
+  if(tracker.bracket.length === 0){
     return true;
   } else{
     return false;
