@@ -1,0 +1,24 @@
+{
+  "name": "Challenge-Checker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha --watch tests/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JSlovak/Challenge-Checker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JSlovak/Challenge-Checker/issues"
+  },
+  "homepage": "https://github.com/JSlovak/Challenge-Checker#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
