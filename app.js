@@ -1,64 +1,75 @@
 /*jshint esversion: 6 */
 
-module.exports = function checkForMatch (string){
-  tracker = [];
+let checkForMatch = function(string){
+  let bracketTracker = [];
+  let braceTracker = [];
+  let curlyBraceTracker = [];
+  let carrotTracker = [];
+  console.log(string);
 
 
-  const bracket1 = "(";
-  const bracket2 = ")";
-  const brace1 = "[";
-  const brace2 = "]";
-  const curlyBrace1 = "{";
-  const curlyBrace2 = "}";
-  const carrot1 = "<";
-  const carrot2 = ">";
+  let bracket1 = "(";
+  let bracket2 = ")";
+  let brace1 = "[";
+  let brace2 = "]";
+  let curlyBrace1 = "{";
+  let curlyBrace2 = "}";
+  let carrot1 = "<";
+  let carrot2 = ">";
 
 
-  for( bracket1 in str){
+for (let i = 0; i< string.length; i++){
+  if( string[i] === bracket1){
 
-      tracker.push("1");
+      bracketTracker.push('(');
+      console.log(bracketTracker);
   }
 
-  for(bracket2 in str){
+  if ( string[i] === bracket2){
 
-      tracker.pop();
+      bracketTracker.pop();
+      console.log(bracketTracker);
   }
+}
+console.log(bracketTracker);
 
-  for( brace1 in str){
 
-      tracker.push("1");
-  }
+  // for( brace1 in string){
 
-  for(brace2  in str){
+  //     tracker.push("1");
+  // }
 
-      tracker.pop();
-  }
+  // for(brace2  in string){
 
-  for( curlyBrace1 in str){
+  //     tracker.pop();
+  // }
 
-      tracker.push("1");
-  }
+  // for( curlyBrace1 in string){
 
-  for(curlyBrace2 in str){
+  //     tracker.push("1");
+  // }
 
-      tracker.pop();
-  }
+  // for(curlyBrace2 in string){
 
-  for(carrot1 in str){
+  //     tracker.pop();
+  // }
 
-      tracker.push("1");
-  }
+  // for(carrot1 in string){
 
-  for(carrot2 in str){
+  //     tracker.push("1");
+  // }
 
-      tracker.pop();
-  }
+  // for(carrot2 in string){
 
-  if(tracker.length === 0){
+  //     tracker.pop();
+  // }
+  if(bracketTracker.length === 0){
     return true;
   } else{
     return false;
   }
+
 };
 
+module.exports = checkForMatch;
 

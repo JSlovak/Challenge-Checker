@@ -10,8 +10,8 @@ describe("checkForMatch", function(){
     expect(checkForMatch).to.be.a("function");
   });
 
-  it.skip ("check for matching sets of braces in a string",function(){
-    expect(checkForMatch('((yes))')).to.be.equal(true);
+  it("check for matching sets of braces in a string",function(){
+    //expect(checkForMatch('((yes))')).to.be.equal(true);
     expect(checkForMatch('((nooo)')).to.be.equal(false);
   });
 
